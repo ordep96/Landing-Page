@@ -1,0 +1,69 @@
+#testimonials{
+  background:url('../img/bg-pattern.jpg');
+  padding:30px 0 50px 0;
+  position:relative;
+
+  @include from(tablet){
+    margin-top:30px;
+  }
+}
+
+
+
+.testimonial{
+  text-align:center;
+  color:#fff;
+  position:relative;
+  margin-top:10px;
+  padding:1.4em;
+
+  &__description{
+    font-size:.90em;
+    position:relative;
+
+    @include from(tablet){
+      width:700px;
+      margin:auto;
+      font-size:1.4em;
+      letter-spacing:1px;
+    }
+
+    &::before{
+      content:"\f10d";
+      position:absolute;
+      top:-5px;
+      left:5px;
+      font-size:1em;
+      font-family: 'Font Awesome\ 5 Free' !important;
+      font-weight:900;
+    }
+
+  }
+
+  &__user{
+    margin-top:20px;
+  }
+
+}
+
+.tns-nav{
+  position:absolute;
+  bottom:30px;
+  left:50%;
+  transform:translateX(-50%);
+  button{
+    width:8px;
+    height:8px;
+    border:none;
+    margin:5px;
+    border-radius:50%;
+    background:#333;
+
+    &.tns-nav-active{
+      background:#fff;
+      width:10px;
+      height:10px;
+    }
+  }
+
+}

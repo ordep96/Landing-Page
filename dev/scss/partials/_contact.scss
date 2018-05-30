@@ -1,0 +1,107 @@
+#contact{
+  margin-top:60px;
+  padding:20px 0 20px 0;
+  background:#F6F6F6;
+}
+
+.contact{
+  display:grid;
+  grid-template-columns:1fr;
+
+  @include from(desktop){
+    grid-template-columns:repeat(2,1fr);
+    grid-gap:20px;
+  }
+
+  &__info{
+    &__title{
+      font-size:2em;
+    }
+
+    &__description{
+      color:$colorDescription;
+      font-size:.90em;
+      text-align:left;
+      margin-top:20px;
+
+
+    }
+
+    &__details{
+      margin-top:10px;
+
+      p {
+       color:$colorDescription;
+        span{
+          color:#000;
+          font-weight:600;
+        }
+      }
+
+    }
+
+  }
+
+
+  &__form{
+    margin-top:20px;
+    .form{
+      display:grid;
+      grid-template-areas: "name name"
+                            "email email"
+                            "title title"
+                            "message message";
+
+     @include from(desktop){
+      grid-gap:10px;
+      grid-template-areas:"name email"
+                           "title title"
+                           "message message";
+     }
+
+      &__field{
+        display:block;
+        width:100%;
+        border:none;
+        margin-top:10px;
+        padding:.90em;
+        box-shadow:0 0 2px rgba(#000,.1);
+      }
+
+      &__name{
+        grid-area:name;
+      }
+
+      &__email{
+        grid-area:email;
+      }
+
+      &__title{
+        grid-area:title;
+      }
+
+      &__message{
+        grid-area:message;
+        resize:none;
+
+        &:focus,&:active{outline:none;}
+
+      }
+
+      &__send{
+        display:block;
+        margin-top:10px;
+        background:$colorTitles;
+        border:none;
+        color:#fff;
+        width:150px;
+        line-height:3.5em;
+        text-transform:uppercase;
+      }
+
+    }
+
+  }
+
+
+}

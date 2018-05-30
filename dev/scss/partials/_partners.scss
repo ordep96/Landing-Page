@@ -1,0 +1,19 @@
+#partners{
+  padding:20px 0 20px 0;
+  @include from(tablet){
+    margin-top:30px;
+  }
+
+  .tns-nav{
+    display:none;
+  }
+
+}
+
+
+.partner{
+  &__img{
+    width:100%;
+  }
+
+}

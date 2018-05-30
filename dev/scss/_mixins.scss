@@ -1,0 +1,33 @@
+
+$breakpoint: (
+  base:320px,
+  movil:768px,
+  tablet:992px,
+  desktop:1200px
+);
+
+@mixin from($md){
+
+  @if map-has-key($breakpoint,$md){
+    @media screen and (min-width:map-get($breakpoint,$md)){ @content; }
+  }
+
+};
+
+
+@mixin to($md){
+  @if map-has-key($breakpoint,$md ){
+    @media screen and (max-width:map-get($breakpoint,$md)){ @content; }
+  }
+};
+
+
+@mixin fromTo($from,$to){
+
+  @if map-has-key($breakpoint,$from) and map-has-key($breakpoint, $to){
+    @media screen and (min-width:map-get($breakpoint,$from)) and (max-width:map-get($breakpoint,$to)){
+      @content;
+    }
+  }
+
+}

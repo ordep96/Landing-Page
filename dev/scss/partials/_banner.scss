@@ -1,0 +1,63 @@
+#banner{
+  width:100%;
+  height:300px;
+  background:url('../img/home-7.jpg');
+  background-size:cover;
+  padding-top:50px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+
+
+  @include fromTo(tablet,desktop){
+    height:420px;
+  }
+
+  @include from(desktop){
+    height:100vh;
+  }
+
+
+
+  &::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(#000,.4);
+  }
+
+}
+
+
+.banner{
+  text-align:center;
+  color:#fff;
+  font-family:$playfair;
+  position:relative;
+
+
+  &__title{
+    font-weight:900;
+    font-size:1.3em;
+    line-height:1.5em;
+
+    @include fromTo(tablet,desktop){
+      font-size:2.3em;
+    }
+
+    @include from(desktop){
+      font-size:4em;
+    }
+    span{
+      display:block;
+      font-weight:300;
+      font-style: italic;
+    }
+  }
+
+
+}

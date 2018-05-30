@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scalable=no" )
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Landing Page
+    link(rel="stylesheet", href="public/css/style.css")
+    link(rel="stylesheet", href="public/css/tiny-slider.css")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous")
+
+  // Template Maquetado por Pedro Muñoz
+  // https://codepen.io/ordep96
+  // https://pedropmo55.000webhostapp.com
+
+  body
+
+    header#header
+      .menu-bar
+        .logo
+          h2.titles.title-italic Landing
+        a(href="#")#toggle-menu
+          span.fa.fa-bars
+      .container
+        .header
+          .header__logo
+            h2 Landing
+          nav.header__menu
+            ul
+              li: a(href="#") About
+              li: a(href="#") Contact
+              li: a(href="#") Portfolio
+              li: a(href="#") Blog
+            ul.sociales
+              li: a(href="#")
+                span.fab.fa-twitter
+              li: a(href="#")
+                span.fab.fa-facebook-f
+              li: a(href="#")
+                span.fab.fa-behance
+              li: a(href="#")
+                span.fab.fa-instagram
+
+
+    section#banner
+      .container
+        .banner
+          h2.banner__title We are about to change the way
+            span you publish on the web
+
+    section#about
+      .container
+        article.about
+          h2.about__title.titles About Our Agency
+          p.about__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ab sunt, maxime obcaecati eos excepturi aut, labore repudiandae quis dicta iure quasi necessitatibus, placeat quos? Ad dicta tenetur saepe? Cum.
+
+    section#success
+      .container
+        .grid.grid-success
+          article.success
+            .success__icon
+              span.fa.fa-briefcase
+            .success__info
+              span 548
+              p projects completed
+          article.success
+            .success__icon
+              span.far.fa-clock
+            .success__info
+              span 1465
+              p working Hours
+          article.success
+            .success__icon
+              span.far.fa-star
+            .success__info
+              span 612
+              p positive feedbacks
+          article.success
+            .success__icon
+              span.far.fa-heart
+            .success__info
+              span 735
+              p happy clients
+
+    section#projects
+      .container
+        .project
+          article.project__caption
+            h2.titles Best Projects
+            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni laudantium optio sed nulla atque ipsam? Voluptatem ducimus nulla aspernatur vero commodi. Nisi commodi ducimus vero animi voluptatem suscipit hic optio!.
+          .project__gallery
+            .gallery-item
+              .overlay-item
+                h3.title.titles Vinyl Record
+                p.tag Mockup
+              img(src="public/img/portfolio/portfolio-2-sm.jpg", alt="img-1")
+            .gallery-item
+              .overlay-item
+                h3.title.titles Modern T-Shirt
+                p.tag print
+              img(src="public/img/portfolio/portfolio-3-sm.jpg", alt="img-2")
+            .gallery-item
+              .overlay-item
+                h3.title.titles Minimal Bag
+                p.tag branding
+              img(src="public/img/portfolio/portfolio-4-sm.jpg", alt="img-3")
+            .gallery-item
+              .overlay-item
+                h3.title.titles Clean & Groovy
+                p.tag design
+              img(src="public/img/portfolio/portfolio-5-sm.jpg", alt="img-4")
+            .gallery-item
+              .overlay-item
+                h3.title.titles Minimal Mobile App
+                p.tag design
+              img(src="public/img/portfolio/portfolio-6-sm.jpg", alt="img-5")
+            .gallery-item
+              .overlay-item
+                h3.title.titles White T-Shirt
+                p.tag print
+              img(src="public/img/portfolio/portfolio-7-sm.jpg", alt="img-6")
+            .gallery-item
+              .overlay-item
+                h3.title.titles Bussiness Card
+                p.tag branding
+              img(src="public/img/portfolio/portfolio-8-sm.jpg", alt="img-7")
+            .gallery-item
+              .overlay-item
+                h3.title.titles Heja Stockholm
+                p.tag photography
+              img(src="public/img/portfolio/portfolio-9-sm.jpg", alt="img-8")
+            .gallery-item
+              .overlay-item
+                h3.title.titles Paper Bag
+                p.tag photografy
+              img(src="public/img/portfolio/portfolio-10-sm.jpg", alt="img-9")
+
+    section#testimonials
+      .container
+        .testimonials-slider.my-slider
+          .testimonial
+            .testimonial__description.titles.title-italic Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus porro autem vel debitis cumque veniam tempore saepe consequuntur quis quam, amet voluptate deserunt, dolor error sapiente natus fugiat enim ipsum?
+            .testimonial__user Michael Hopkins
+          .testimonial
+            .testimonial__description.titles.title-italic Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus porro autem vel debitis cumque veniam tempore saepe consequuntur quis quam, amet voluptate deserunt, dolor error sapiente natus fugiat enim ipsum?
+            .testimonial__user Michael Hopkins
+          .testimonial
+            .testimonial__description.titles.title-italic Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus porro autem vel debitis cumque veniam tempore saepe consequuntur quis quam, amet voluptate deserunt, dolor error sapiente natus fugiat enim ipsum?
+            .testimonial__user Michael Hopkins
+
+    section#partners
+      .container
+        .partners-slider
+          - for(var i=1;i<=8;i++)
+            .partner
+              img.partner__img(src="public/img/partner/partner-logo-"+i+"-dark.png", alt="partner-"+i)
+
+    section#blog
+      .container
+        .blog
+          article.blog__caption
+            h2.title.titles Latest Blog
+            p.description Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit error libero soluta commodi rem? Dicta dolorum, possimus quia sit voluptas recusandae quibusdam, repellendus magnam atque totam debitis suscipit culpa quam.
+          .blog__container
+            article.post
+              .post__head
+                img(src="public/img/post/post-6-mid.jpg", alt="post-1")
+                .tag
+                  span design
+              section.post__body
+                h2.titles.post__body__title Why you should Always First
+                span.post__body__date August 14, 2018
+                p.post__body__description Voluptate, dicta amet. Magnam odit consequuntur accusamus, laudantium non ipsa quas sit praesentium quod nobis voluptates tempore molestiae eaque maiores aliquid omnis.
+            article.post
+              .post__head
+                img(src="public/img/post/post-1-mid.jpg", alt="post-2")
+                .tag
+                  span design
+              section.post__body
+                h2.titles.post__body__title Something I need to tell you
+                span.post__body__date september 18, 2018
+                p.post__body__description Voluptate, dicta amet. Magnam odit consequuntur accusamus, laudantium non ipsa quas sit praesentium quod nobis voluptates tempore molestiae eaque maiores aliquid omnis.
+            article.post
+              .post__head
+                img(src="public/img/post/post-3-mid.jpg", alt="post-3")
+                .tag
+                  span design
+              section.post__body
+                h2.titles.post__body__title The History of Nature
+                span.post__body__date August 27, 2018
+                p.post__body__description Voluptate, dicta amet. Magnam odit consequuntur accusamus, laudantium non ipsa quas sit praesentium quod nobis voluptates tempore molestiae eaque maiores aliquid omnis.
+
+    section#contact
+      .container
+        .contact
+          .contact__info
+            h2.contact__info__title.titles Contact Info
+            p.contact__info__description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, ratione? Perspiciatis aliquid assumenda ab quas. Expedita, ut, praesentium asperiores quo officia ipsam officiis cumque non eos earum suscipit cupiditate quasi.
+            .contact__info__details
+              p
+                span Adress:
+                |  Venezuela, Caracas
+              p
+                span Phone:
+                |  +58 343 434 43
+              p
+                span Email:
+                |  info@landing.com
+          .contact__form
+            form.form(action="")
+              input(class="form__field form__name" type="text" placeholder="Your Name")
+              input(class="form__field form__email" type="email" placeholder="Your Email")
+              input(class="form__field form__title" type="text" placeholder="Your Title")
+              textarea(class="form__field form__message" name="", placeholder="Your Comment", cols="30", rows="10")
+              button(class="form__send" type="submit") send Message
+
+  script(src="public/js/tiny-slider.js")
+  script(src="public/js/main.js")
+  //script(src="https://use.fontawesome.com/d1ed67737b.js")
+

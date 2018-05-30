@@ -1,0 +1,50 @@
+#success{
+  background:url('../img/bg-pattern.jpg');
+  padding:30px 0 30px 0;
+
+  @include from(tablet){
+    padding:50px 0 50px 0;
+  }
+
+
+}
+
+
+.grid-success{
+  grid-template-columns:1fr;
+
+  @include fromTo(tablet,desktop){
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  @include from(desktop){
+    grid-template-columns:repeat(4,1fr);
+  }
+
+}
+
+
+.success{
+  color:#fff;
+  display:flex;
+  align-items:center;
+  margin-top:20px;
+  @include from(tablet){
+    justify-content:center;
+  }
+  &__icon{
+    span{
+      display:block;
+      font-size:1.5em;
+    }
+  }
+
+  &__info{
+    margin-left:20px;
+    p{
+      text-transform:uppercase;
+      margin-top:5px;
+    }
+  }
+
+}

@@ -1,0 +1,119 @@
+#projects{
+  padding:20px 0 20px 0;
+}
+
+
+.project{
+  margin-top:30px;
+  &__caption{
+    text-align:center;
+
+   h2{
+     font-size:2em;
+   }
+
+   p{
+     margin-top:10px;
+     font-size:.90em;
+     color:$colorDescription;
+     font-weight:400;
+     @include from(tablet){
+       width:600px;
+       margin:20px auto;
+     }
+   }
+
+  }
+
+
+  .project__gallery{
+    display:grid;
+    grid-template-columns:1fr;
+    margin-top:40px;
+
+    @include fromTo(movil,tablet){
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    @include fromTo(tablet,desktop){
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    @include from(desktop){
+      grid-template-columns: repeat(3,1fr);
+    }
+
+
+
+
+    .gallery-item{
+      width:100%;
+      height:300px;
+      position:relative;
+
+
+
+      .overlay-item{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(#000,.9);
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        color:#fff;
+        opacity:0;
+        transition:.4s all;
+
+        .title,.tag{
+          position:relative;
+          top:30px;
+          opacity:0;
+          transition:.4s all;
+        }
+
+        .title{
+          font-size:1.5em;
+        }
+
+        .tag{
+          top:40px;
+          text-transform:uppercase;
+          font-weight:600;
+          margin-top:10px;
+        }
+
+
+
+
+
+      }
+
+      img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+      }
+
+      &:hover > .overlay-item{
+        opacity:1;
+        cursor:pointer;
+        .title,.tag{
+          opacity: 1;
+          top:0;
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+}
+
+

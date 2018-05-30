@@ -1,0 +1,63 @@
+@import './partials/variables';
+@import './mixins';
+
+
+*,*::after,*::before{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active{
+  outline:none;
+}
+
+body{
+  font-family:$workSans;
+  background:#fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.grid{
+  display:grid;
+}
+
+.titles{
+  font-family:$playfair !important;
+}
+
+.title-italic{font-style:italic;}
+
+.container{
+  width:90%;
+  margin:auto;
+
+  @include from(desktop){
+    width:1100px;
+    margin:auto;
+  }
+
+
+}
+
+
+.tns-controls{
+  display:none;
+}
+
+
+@import './partials/header';
+@import './partials/banner';
+@import './partials/about';
+@import './partials/success';
+@import './partials/projects';
+@import './partials/testimonials';
+@import './partials/partners';
+@import './partials/blog';
+@import './partials/contact';
+
+

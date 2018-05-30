@@ -1,0 +1,35 @@
+#about{
+  text-align:center;
+  padding:1em;
+  background:#fff;
+
+  @include from(tablet){
+    padding:50px 0 50px 0;
+  }
+
+}
+
+
+
+
+.about{
+
+  &__title{
+    font-size:2em;
+    color:$colorTitles;
+  }
+
+  &__description{
+    font-size:.90em;
+    margin-top:20px;
+    font-weight:400;
+    line-height:1.3em;
+    color:$colorDescription;
+
+    @include from(tablet){
+      width:600px;
+      margin:20px auto;
+    }
+  }
+
+}
